@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Leave Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script language="javascript" src="ChangePassVal.js"></script>
+        <style>
+               .login-container{
+           display: flex;
+            justify-content: center;
+            margin-top: 4%;
+        }
+        .login-form-1{
+            padding: 5%;
+            width : 500px;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+        }
+        .login-form-1 h3{
+            text-align: center;
+            color: #333;
+        }
+        .login-container form{
+            padding: 4%;
+        }
+        .submitBTN
+        {
+            width: 50%;
+            border-radius: 1rem;
+            padding: 1%;
+            border: none;
+            cursor: pointer;
+        }
+        .login-form-1 .submitBTN{
+            font-weight: 600;
+            color: #fff;
+            background-color: #0062cc;
+        }
+
+        .login-form-1 .ForgetPwd{
+            color: #0062cc;
+            font-weight: 600;
+            text-decoration: none;
+        }
+       </style>
+    </head>
+    <body>
+        <div class="login-container" >
+            <div class="row">
+                <div class="login-form-1">
+                    <h2 align="center">Change Password</h2>
+                    <form action = "ChangePass.jsp" method = "post" name = "userform" onsubmit = "return validate();">
+                        <div class="form-group">
+                            <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username" name="username" />
+                            <span id="user_err" style="color:red; font-size:15px;"></span>
+                            </div>
+                            <div class="form-group">
+                            <input type="password" class="form-control" placeholder="New Password" name="newpassword" />
+                            <span id="new_err" style="color:red; font-size:15px;"></span>
+                            <p><br>Password must have at least:</p>
+                            <ul style="list-style-type:square">
+                                <li>8 characters</li>
+                                <li>One Alphabet</li>
+                                <li>One Digit</li>
+                                <li>One Lowercase Character</li>
+                                <li>One Uppercase Character</li>
+                                <li>One Special Character</li>
+                            </ul>
+                            </div>
+                            <div class="form-group">
+                            <input type="submit" name="submitBTN" class="submitBTN" value="ChangePassword" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
